@@ -1,0 +1,3 @@
+TOGO = 
+
+include ../Common.mk

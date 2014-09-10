@@ -1,0 +1,47 @@
+include Common.mk
+
+list: 
+	@echo 'type make install to install: '
+	@echo '  mail/massage-mail'
+	@echo '  mail/split-mail'
+	@echo '  text/center'
+	@echo '  text/esc'
+	@echo '  text/unesc'
+	@echo '  tty/slow-tty'
+	@echo '  utils/bsub'
+	@echo '  utils/hexd'
+	@echo '  utils/make-targets'
+	@echo '  utils/recho'
+
+install: /cgd/bin/_x86_lx/massage-mail /cgd/bin/_x86_lx/split-mail /cgd/bin/_x86_lx/center /cgd/bin/_x86_lx/esc /cgd/bin/_x86_lx/unesc /cgd/bin/_x86_lx/slow-tty /cgd/bin/_x86_lx/bsub /cgd/bin/_x86_lx/hexd /cgd/bin/_x86_lx/make-targets /cgd/bin/_x86_lx/recho 
+
+/cgd/bin/_x86_lx/massage-mail: mail/massage-mail.c
+	$(CC) $(XFLAGS) -o $@ mail/massage-mail.c
+
+/cgd/bin/_x86_lx/split-mail: mail/split-mail.c
+	$(CC) $(XFLAGS) -o $@ mail/split-mail.c
+
+/cgd/bin/_x86_lx/center: text/center.c
+	$(CC) $(XFLAGS) -o $@ text/center.c
+
+/cgd/bin/_x86_lx/esc: text/esc.c
+	$(CC) $(XFLAGS) -o $@ text/esc.c
+
+/cgd/bin/_x86_lx/unesc: text/unesc.c
+	$(CC) $(XFLAGS) -o $@ text/unesc.c
+
+/cgd/bin/_x86_lx/slow-tty: tty/slow-tty.c
+	$(CC) $(XFLAGS) -o $@ tty/slow-tty.c
+
+/cgd/bin/_x86_lx/bsub: utils/bsub.c
+	$(CC) $(XFLAGS) -o $@ utils/bsub.c
+
+/cgd/bin/_x86_lx/hexd: utils/hexd.c
+	$(CC) $(XFLAGS) -o $@ utils/hexd.c
+
+/cgd/bin/_x86_lx/make-targets: utils/make-targets.c
+	$(CC) $(XFLAGS) -o $@ utils/make-targets.c
+
+/cgd/bin/_x86_lx/recho: utils/recho.c
+	$(CC) $(XFLAGS) -o $@ utils/recho.c
+
